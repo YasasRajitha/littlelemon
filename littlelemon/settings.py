@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r-%0eqcja86asp_+*1@3d6t9wm65$7^p*v^m961p@)w7*3ob0n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.56.102','192.168.56.103','web01','web02','192.168.56.104']
 
 
 # Application definition
@@ -129,11 +129,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # The settings for static files have been updated for the Graded assessment
-STATIC_URL = 'restaurant/static/'
+
+# STATIC_URL = 'restaurant/static/'
+
+# STATICFILES_DIRS = [
+#     "restaurant/static",
+# ]
+
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    "restaurant/static",
+    "restaurant/static"
 ]
+
+# STATIC_ROOT = '/littlelemon/sit/public/static'
+STATIC_ROOT = '/home/vagrant/littlelemon/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
